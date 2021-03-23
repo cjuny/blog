@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <title>该页面不存在-404</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <style>
+      body,
+      h1,
+      p,
+      pre {
+        margin: 0;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
+          'PingFang SC', 'Microsoft YaHei', 'Source Han Sans SC',
+          'Noto Sans CJK SC', 'WenQuanYi Micro Hei', sans-serif;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    </style>
+    <style>
+      .Button {
+        display: inline-block;
+        padding: 0;
+        border: none;
+
+        font-size: 14px;
+        text-align: center;
+
+        background: none;
+        cursor: pointer;
+      }
+
+      .Button:focus {
+        outline: none;
+
+        transition: box-shadow 0.3s;
+      }
+
+      /* 暂时没有用 focus visiable */
+      .Button:focus {
+        box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(0, 132, 255, 0.3);
+      }
+
+      html[data-theme='dark'] .Button:focus {
+        box-shadow: 0 0 0 2px #1a1a1a, 0 0 0 4px rgba(58, 118, 208, 0.6);
+      }
+
+      .Button--primary {
+        padding: 0 16px;
+        border: 1px solid;
+        border-radius: 3px;
+
+        line-height: 32px;
+      }
+
+      .Button--primary.Button--blue {
+        border-color: #0084ff;
+
+        color: #fff;
+
+        background-color: #0084ff;
+      }
+
+      html[data-theme='dark'] .Button--primary.Button--blue {
+        border-color: #3a76d0;
+
+        color: #fff;
+
+        background-color: #3a76d0;
+      }
+
+      .Button--primary.Button--blue:hover {
+        border-color: #0077e6;
+
+        background-color: #0077e6;
+      }
+
+      html[data-theme='dark'] .Button--primary.Button--blue:hover {
+        border-color: #2e69c2;
+
+        background-color: #2e69c2;
+      }
+
+      .Button--plain.Button--blue {
+        color: #0084ff;
+      }
+
+      html[data-theme='dark'] .Button--plain.Button--blue {
+        color: #3a76d0;
+      }
+
+      .Button--plain.Button--blue:hover {
+        color: #0077e6;
+      }
+
+      html[data-theme='dark'] .Button--plain.Button--blue:hover {
+        color: #2e69c2;
+      }
+    </style>
+    <style>
+      body {
+        /* cc(GBK99A) */
+        background: #fff;
+      }
+
+      html[data-theme='dark'] body {
+        background: #1a1a1a;
+      }
+
+      .ErrorPage-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 180px;
+      }
+      @media (max-width: 690px) {
+        .ErrorPage-container {
+          flex-direction: column-reverse;
+          align-items: center;
+          margin-top: 60px;
+        }
+      }
+
+      .ErrorPage-title,
+      .ErrorPage-subtitle {
+        /* cc(GBK04A) */
+        color: #646464;
+        line-height: 1.4;
+      }
+
+      html[data-theme='dark'] .ErrorPage-title,
+      html[data-theme='dark'] .ErrorPage-subtitle {
+        color: #999;
+      }
+
+      .ErrorPage-title {
+        font-weight: 600;
+        font-size: 40px;
+
+        /* @mixin bold; */
+        font-synthesis: style;
+      }
+
+      html[data-ios] .ErrorPage-title {
+        font-weight: 500;
+      }
+
+      html[data-android] .ErrorPage-title {
+        font-weight: 700;
+      }
+      @media (max-width: 690px) {
+        .ErrorPage-title {
+          font-size: 30px;
+        }
+      }
+
+      .ErrorPage-subtitle {
+        margin-top: 10px;
+
+        font-size: 18px;
+      }
+
+      .ErrorPage-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        min-width: 384px;
+      }
+      @media (max-width: 690px) {
+        .ErrorPage-text {
+          align-items: center;
+          min-width: auto;
+        }
+      }
+
+      .ErrorPage-primaryButton {
+        margin-top: 20px;
+      }
+
+      .ErrorPage-otherButton {
+        display: flex;
+        align-items: center;
+        margin-left: 0.5em;
+
+        font-weight: 600;
+
+        /* @mixin bold; */
+        font-synthesis: style;
+      }
+
+      html[data-ios] .ErrorPage-otherButton {
+        font-weight: 500;
+      }
+
+      html[data-android] .ErrorPage-otherButton {
+        font-weight: 700;
+      }
+
+      .ErrorPage-errorImageContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 250px;
+        height: 250px;
+        margin-left: 20px;
+      }
+      @media (max-width: 690px) {
+        .ErrorPage-errorImageContainer {
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ErrorPage">
+      <div class="ErrorPage-container">
+        <div class="ErrorPage-text">
+          <h1 class="ErrorPage-title">404</h1>
+          <p class="ErrorPage-subtitle">你似乎来到了没有知识存在的荒原</p>
+          <a
+            class="Button Button--primary Button--blue ErrorPage-primaryButton"
+            href="https://cjuny.github.io/"
+          >
+            去往首页
+          </a>
+        </div>
+        <div class="ErrorPage-errorImageContainer">
+          <img
+            class="ErrorPage-errorImage"
+            src="/img/liukanshan_wire.svg"
+            alt="page error"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
