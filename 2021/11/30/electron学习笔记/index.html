@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Electron学习笔记 - CJ&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="CJ&#039;s Blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="CJ&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Electron简介Electron是由Github开发，用HTML，CSS和JavaScript来构建跨平台桌面应用程序的 一个开源库。Electron通过将Chromium和Node.js合并到同一个运行时环境中，并将其打 包为Mac，Windows和Linux系统下的应用来实现跨平台"><meta property="og:type" content="blog"><meta property="og:title" content="Electron学习笔记"><meta property="og:url" content="http://example.com/2021/11/30/electron%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><meta property="og:site_name" content="CJ&#039;s Blog"><meta property="og:description" content="Electron简介Electron是由Github开发，用HTML，CSS和JavaScript来构建跨平台桌面应用程序的 一个开源库。Electron通过将Chromium和Node.js合并到同一个运行时环境中，并将其打 包为Mac，Windows和Linux系统下的应用来实现跨平台"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.001.png"><meta property="og:image" content="http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.002.jpeg"><meta property="og:image" content="http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.003.png"><meta property="og:image" content="http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.004.png"><meta property="og:image" content="http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.005.png"><meta property="og:image" content="http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.005.png"><meta property="og:image" content="http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.006.png"><meta property="og:image" content="http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.007.png"><meta property="og:image" content="http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.008.png"><meta property="og:image" content="http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.009.png"><meta property="og:image" content="http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.010.png"><meta property="og:image" content="http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.011.png"><meta property="article:published_time" content="2021-11-30T06:58:02.000Z"><meta property="article:modified_time" content="2021-11-30T07:07:09.891Z"><meta property="article:author" content="CJ"><meta property="article:tag" content="Electron"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.001.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/11/30/electron%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"},"headline":"Electron学习笔记","image":["http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.001.png","http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.003.png","http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.004.png","http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.005.png","http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.005.png","http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.006.png","http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.007.png","http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.008.png","http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.009.png","http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.010.png","http://example.com/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.011.png"],"datePublished":"2021-11-30T06:58:02.000Z","dateModified":"2021-11-30T07:07:09.891Z","author":{"@type":"Person","name":"CJ"},"description":"Electron简介Electron是由Github开发，用HTML，CSS和JavaScript来构建跨平台桌面应用程序的 一个开源库。Electron通过将Chromium和Node.js合并到同一个运行时环境中，并将其打 包为Mac，Windows和Linux系统下的应用来实现跨平台"}</script><link rel="canonical" href="http://example.com/2021/11/30/electron%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">CJ&#039;s Blog</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/about">关于</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/cjuny"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-30T06:58:02.000Z" title="2021-11-30 2:58:02 ├F10: PM┤">2021-11-30</time>发表</span><span class="level-item"><time dateTime="2021-11-30T07:07:09.891Z" title="2021-11-30 3:07:09 ├F10: PM┤">2021-11-30</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Electron/">Electron</a></span><span class="level-item">10 分钟读完 (大约1513个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Electron学习笔记</h1><div class="content"><h4 id="Electron简介"><a href="#Electron简介" class="headerlink" title="Electron简介"></a>Electron简介</h4><p>Electron是由Github开发，用HTML，CSS和JavaScript来构建跨平台桌面应用程序的 一个开源库。Electron通过将Chromium和Node.js合并到同一个运行时环境中，并将其打 包为Mac，Windows和Linux系统下的应用来实现跨平台</p>
+<span id="more"></span>
+
+<br/>
+
+<h4 id="Electron程序的基本结构"><a href="#Electron程序的基本结构" class="headerlink" title="Electron程序的基本结构"></a>Electron程序的基本结构</h4><p>一个基本的 Electron 程序需要包括下面几个文件：</p>
+<ul>
+<li>package.json：应用的入口文件，包含应用程序的相关配置信息: 作者，名称， 依赖项等，并指定程序的启动文件；</li>
+<li>main.js：应用的启动脚本，它将会在主进程中执行</li>
+<li>index.html：应用程序的渲染页面。</li>
+</ul>
+<br/>
+
+<h4 id="主进程和渲染进程"><a href="#主进程和渲染进程" class="headerlink" title="主进程和渲染进程"></a>主进程和渲染进程</h4><p>在 electron 中，最重要的一个概念就是主进程和渲染进程。Electron 运行 package.json 中指定的 main 脚本的进程被称为主进程。 在主进程中运行的脚本通过 创建web页面即渲染进程来展示用户界面。 一个 Electron应用总是有且只有一个主进程， 但是可以创建多个渲染进程。</p>
+<p>在主线程中你可以使用Node.js，electron关于主线程操作的模块和一些公共模块。在 主线程中你需要创建和销毁app，创建和管理渲染进程，调用系统原生 API 等。</p>
+<p>在主进程创建的一个个web页面各自运行着自己的进程，即渲染进程，渲染进程各自独 立，各自管理自己的页面，可以想象是浏览器一个个的 tab。在渲染线程中你可以使用 Node.js，DOM api，electron关于渲染线程操作的模块和一些公共模块。在渲染线程中你 需要使用js，html，css设计你的页面。</p>
+<p>主进程使用 BrowserWindow 实例创建页面。 每个 BrowserWindow 实例都在自己 的渲染进程里运行页面。 当一个 BrowserWindow 实例被销毁后，相应的渲染进程也会被 终止。主进程管理所有的web页面和它们对应的渲染进程。 每个渲染进程都是独立的，它 只关心它所运行的 web 页面。如果有多个渲染进程，当其中一个窗口被关闭时，对应的窗 口对象引用要被释放掉。</p>
+<p><img src="/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.001.png"></p>
+<br/>
+
+<h4 id="主进程与渲染进程之间的通信"><a href="#主进程与渲染进程之间的通信" class="headerlink" title="主进程与渲染进程之间的通信"></a>主进程与渲染进程之间的通信</h4><h5 id="一：使用ipcMain和ipcRenderer模块"><a href="#一：使用ipcMain和ipcRenderer模块" class="headerlink" title="一：使用ipcMain和ipcRenderer模块"></a>一：使用ipcMain和ipcRenderer模块</h5><p>在主进程中使用ipcMain接收渲染线程发送过来的异步或同步消息，发送过来的消息将 触发事件。</p>
+<p>在渲染进程中使用ipcRenderer向主进程发送同步或异步消息，也可以接收到主进程的 消息。</p>
+<ul>
+<li>发送消息，事件名为 channel</li>
+<li>回应同步消息, 你可以设置 event.returnValue</li>
+<li>回应异步消息, 你可以使用 event.sender.send(…)</li>
+</ul>
+<p><img src="/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.002.jpeg"></p>
+<br/>
+
+<h5 id="二：使用webcontents"><a href="#二：使用webcontents" class="headerlink" title="二：使用webcontents"></a>二：使用webcontents</h5><p>同样也可以从主进程向渲染进程发送消息，使用的是 webContents.send方法 (webContents负责渲染和控制网页, 是 Brows<a target="_blank" rel="noopener" href="https://electronjs.org/docs/api/browser-window">erWindow 对象的一个</a>属性)。需要注意的是 往哪个窗口对应的渲染线程中发消息，就使用哪个窗口对象来调用。</p>
+<p><img src="/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.003.png"></p>
+<br/>
+
+<h5 id="三：使用remote"><a href="#三：使用remote" class="headerlink" title="三：使用remote"></a>三：使用remote</h5><p>在渲染进程中使用主进程模块</p>
+<p><img src="/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.004.png"></p>
+<p>远程对象</p>
+<p>remote 模块返回的每个对象（ 包括函数） 都代表了主进程中的一个对象（我们称之 为远程对象或者远程函数）。当调用远程对象的方法、执行远程函数或者使用远程构造器（ 函数） 创建新对象时，其实就是在发送同步的进程间消息。</p>
+<p>在上面的例子中， BrowserWindow 和 win 都是远程对象，然而 new BrowserWindow 并没有在渲染进程中创建 BrowserWindow 对象。 而是在主进程中创建 了BrowserWindow 对象，并在渲染进程中返回了对应的远程对象，即 win 对象。只有可 枚举属性才能通过 remote 进行访问.</p>
+<p>//如果需要从主进程访问渲染进程，可以使用 webContents. executeJavascript 。 //注意事项： 因为安全原因，remote 模块能在窗口初始化设置中通过设</p>
+<p>置 enableRemoteModule 选项为 false以此来禁用。</p>
+<br/>
+
+<h5 id="四-使用全局变量"><a href="#四-使用全局变量" class="headerlink" title="四:使用全局变量"></a>四:使用全局变量</h5><p><img src="/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.005.png"></p>
+<p>渲染进程之间的通信 方案一 使用全局共享属性</p>
+<p><img src="/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.005.png"></p>
+<p>方案二 利用主进程做消息中转</p>
+<p><img src="/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.006.png"></p>
+<p>方案三 利用 remote 获取渲染进程发送消息</p>
+<p><img src="/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.007.png"></p>
+<p>方案四 使用 ipcRenderer.sendTo()</p>
+<p><img src="/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.008.png"></p>
+<br/>
+
+<h4 id="electron应用的打包"><a href="#electron应用的打包" class="headerlink" title="electron应用的打包"></a>electron应用的打包</h4><p>electron-packager及electron-builder两种方式实现（Windows下）</p>
+<br/>
+
+<h5 id="electron-packager："><a href="#electron-packager：" class="headerlink" title="electron-packager："></a>electron-packager：</h5><p>npm install electron-packager –save-dev</p>
+<p>electron-packager <sourcedir> <appname> –platform=<platform> –arch= <arch> [optional flags…]</p>
+<p><img src="/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.009.png"></p>
+<p>elelctron-packager打包只是打包成各个平台下可执行文件，并不是安装包，如果需要打包 成安装包之类的可以使用electron-builder。</p>
+<br/>
+
+<h5 id="electron-builder："><a href="#electron-builder：" class="headerlink" title="electron-builder："></a>electron-builder：</h5><p>npm install electron-builder –save-dev 在package.json中增加配置</p>
+<p><img src="/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.010.png"></p>
+<p>安装过程配置（nsis配置）：</p>
+<p><img src="/img/electron/Aspose.Words.891ce3aa-0e4e-489c-bd14-123e49d82f34.011.png"></p>
+<p>.exe是安装文件，默认安装在c盘。 .zip是压缩包，解压即用。 latest.yml 更新相关的信息</p>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Electron/">Electron</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/04/28/OAuth%202.0/"><span class="level-item">OAuth 2.0学习总结</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#Electron简介"><span class="level-left"><span class="level-item">1</span><span class="level-item">Electron简介</span></span></a></li><li><a class="level is-mobile" href="#Electron程序的基本结构"><span class="level-left"><span class="level-item">2</span><span class="level-item">Electron程序的基本结构</span></span></a></li><li><a class="level is-mobile" href="#主进程和渲染进程"><span class="level-left"><span class="level-item">3</span><span class="level-item">主进程和渲染进程</span></span></a></li><li><a class="level is-mobile" href="#主进程与渲染进程之间的通信"><span class="level-left"><span class="level-item">4</span><span class="level-item">主进程与渲染进程之间的通信</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#一：使用ipcMain和ipcRenderer模块"><span class="level-left"><span class="level-item">4.1</span><span class="level-item">一：使用ipcMain和ipcRenderer模块</span></span></a></li><li><a class="level is-mobile" href="#二：使用webcontents"><span class="level-left"><span class="level-item">4.2</span><span class="level-item">二：使用webcontents</span></span></a></li><li><a class="level is-mobile" href="#三：使用remote"><span class="level-left"><span class="level-item">4.3</span><span class="level-item">三：使用remote</span></span></a></li><li><a class="level is-mobile" href="#四-使用全局变量"><span class="level-left"><span class="level-item">4.4</span><span class="level-item">四:使用全局变量</span></span></a></li></ul></li><li><a class="level is-mobile" href="#electron应用的打包"><span class="level-left"><span class="level-item">5</span><span class="level-item">electron应用的打包</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#electron-packager："><span class="level-left"><span class="level-item">5.1</span><span class="level-item">electron-packager：</span></span></a></li><li><a class="level is-mobile" href="#electron-builder："><span class="level-left"><span class="level-item">5.2</span><span class="level-item">electron-builder：</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">CJ&#039;s Blog</a><p class="is-size-7"><span>&copy; 2021 CJ</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
